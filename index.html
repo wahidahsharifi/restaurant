@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <img src="food.png" loading="lazy" alt="failed" width="20px">
+        <input type="checkbox" id="input-m">
+        <label for="input-m" class="menu"><div>&#x1f81a;</div></label>
+        <nav>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#order">Menu</a>
+                <a href="#call">Location</a>
+                <a href="#Comments">comments</a>
+            </div>
+            <div>
+                <a href="#"><abbr title="shop card"><img src="shop.png" loading="lazy" alt="shop box" width="20px"></abbr></a>
+                <a href="#" id="pageSearch"><abbr title="Search"><img src="search.svg" loading="lazy" alt="search" width="20px"></abbr></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome" id="home">
+            <h1 id="bom">Welcome <br>To Our Cuisine <br>Restaurant</h1>
+            <form action="">
+                <button type="reset"><img src="search.svg" loading="lazy" alt="search" width="20px"></button>
+                <input type="search" placeholder="Search Here">
+                <select>
+                    <option value="" selected disabled style="display: none;">Location</option>
+                    <optgroup label="Herat">
+                        <option value="city">city</option>
+                        <option value="Shindand">Shindand</option>
+                        <option value="zandaJan">ZandanJan</option>
+                        <option value="farsi">Farsi</option>
+                    </optgroup>
+                    <optgroup label="farah">
+                        <option value="city">city</option>
+                        <option value="toot">Toot</option>
+                        <option value="chakaw">Chakaw</option>
+                        <option value="morqhav">Morqhav</option>
+                    </optgroup>
+                </select>
+            </form>
+            <nav class="reference">
+                <a href="#"><abbr title="facebook"><img src="f.png" loading="lazy" alt="facebook" class="facebook"><span>252k</span></a></abbr>
+                <a href="#"><abbr title="X"><img loading="lazy" src="x.png" alt="x" class="x"><span>62k</span></abbr></a>
+                <a href="#"><abbr title="instagram"><img loading="lazy" src="image-removebg-preview.png" alt="instagram" class="instagram"><span>55k</span></abbr></a>
+            </nav>
+        </section>
+        <section class="story" id="about">
+            <span>About Us</span>
+            <h2>Discover Our Restaurant Story</h2>
+            <p>Cuisine is a team work of Cuisine Restaurant CAfe, we aim at promoting the feedstuff in dusty through the branches, we establish and through the new dishes. and integrate between different cultures. nullam quis ante, Etam sit amet orci aget eras faucibus tin cidunt. Duis leo. Sed fringilla mauris sit amet mibh. Danea sodalas sagittis magna. Aenean commado liqula. sed frinfilla mauris sit amet nibh, Donea sodalas sagittis magna. magna Aenean aemmado ligula.</p>
+            <p>Nullam quis ante. Etlam sit amet arci eget eros faucibus tinaidunt. Duis leo. Sed fringilla mouris sit amet nibh, donec sodales sagittis magna Aenean commando liqula</p>
+            <div>
+                <span>Discover Menu</span>
+                <a href="#">&#x1f81a;</a>
+            </div>
+        </section>
+        <br style="clear: both;">
+        <section class="food-nav" id="order">
+            <span>Order Online Now</span>
+            <h2>Our Specility Cuisine</h2>
+            <nav class="nav">
+                <label for="breakfast" class="nav-item is-active" active-color="orange">Breakfast</label>
+                <label for="lunch" class="nav-item" active-color="green">Lunch</label>
+                <label for="dinner" class="nav-item" active-color="blue">Dinner</label>
+                <label for="dessert" class="nav-item" active-color="red">Dessert</label>
+                <label for="shake" class="nav-item" active-color="rebeccapurple">Shake</label>
+                <span class="nav-indicator"></span>
+            </nav>
+            <article class="input-field">
+                <input type="radio" name="images" id="breakfast" checked>
+                <section class="breakfast-img img-center">
+                    <div>
+                        <img src="breakfast/breakfast1.jpg" loading="lazy" alt="breakfast image" loading="lazy">
+                        <div class="img-about">
+                            <span>$5.00</span>
+                            <img src="5star.png" alt="4-star">
+                            <span>bread</span>
+                            <a href="breakfast/breakfast1.jpg" download="breakfast">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="breakfast/breakfast2.jpg" loading="lazy" alt="breakfast image" loading="lazy">
+                        <div class="img-about">
+                            <span>$4.50</span>
+                            <img src="5star.png" alt="3-star">
+                            <span>bread</span>
+                            <a href="breakfast/breakfast2.jpg" download="breakfast">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="breakfast/breakfast3.jpg" loading="lazy" alt="breakfast image" loading="lazy">
+                        <div class="img-about">
+                            <span>$3.40</span>
+                            <img src="5star.png" alt="3-star">
+                            <span>egg like</span>
+                            <a href="breakfast/breakfast3.jpg" download="breakfast">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="breakfast/breakfast4.jpg" loading="lazy" alt="breakfast image" loading="lazy">
+                        <div class="img-about">
+                            <span>$6.22</span>
+                            <img src="5star.png" alt="3-star">
+                            <span>fruits</span>
+                            <a href="breakfast/breakfast4.jpg" download="breakfast">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="breakfast/breakfast5.jpg" loading="lazy" alt="breakfast image" loading="lazy">
+                        <div class="img-about">
+                            <span>$10.60</span>
+                            <img src="5star.png" alt="3-star">
+                            <span>egg</span>
+                            <a href="breakfast/breakfast5.jpg" download="breakfast">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="breakfast/breakfast6.jpg" loading="lazy" alt="breakfast image" loading="lazy">
+                        <div class="img-about">
+                            <span>$15.30</span>
+                            <img src="5star.png" alt="3-star">
+                            <span>egg</span>
+                            <a href="breakfast/breakfast6.jpg" download="breakfast">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="breakfast/breakfast7.jpg" loading="lazy" alt="breakfast image" loading="lazy">
+                        <div class="img-about">
+                            <span>$15.30</span>
+                            <img src="5star.png" alt="3-star">
+                            <span>egg</span>
+                            <a href="breakfast/breakfast7.jpg" download="breakfast">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="breakfast/breakfast8.jpg" loading="lazy" alt="breakfast image" loading="lazy">
+                        <div class="img-about">
+                            <span>$30.00</span>
+                            <img src="5star.png" alt="4-star">
+                            <span>fruits</span>
+                            <a href="breakfast/breakfast8.jpg" download="breakfast">Order</a>
+                        </div>
+                    </div>
+                </section>
+                <input type="radio" name="images" id="lunch">
+                <section class="img-center">
+                    <div>
+                        <img src="lunch/lunch1.jpg" loading="lazy" alt="lunch image" loading="lazy">
+                        <div class="img-about">
+                            <span>$16.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>crab</span>
+                            <a href="lunch/lunch1.jpg" download="Lunch">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="lunch/lunch2.jpg" loading="lazy" alt="lunch image" loading="lazy">
+                        <div class="img-about">
+                            <span>$15.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>grain</span>
+                            <a href="lunch/lunch2.jpg" download="Lunch">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="lunch/lunch3.jpg" loading="lazy" alt="lunch image" loading="lazy">
+                        <div class="img-about">
+                            <span>$18.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>salad</span>
+                            <a href="lunch/lunch3.jpg" download="Lunch">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="lunch/lunch4.jpg" loading="lazy" alt="lunch image" loading="lazy">
+                        <div class="img-about">
+                            <span>$22.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>soup</span>
+                            <a href="lunch/lunch4.jpg" download="Lunch">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="lunch/lunch5.jpg" loading="lazy" alt="lunch image" loading="lazy">
+                        <div class="img-about">
+                            <span>$10.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>chicken</span>
+                            <a href="lunch/lunch5.jpg" download="Lunch">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="lunch/lunch6.jpg" loading="lazy" alt="lunch image" loading="lazy">
+                        <div class="img-about">
+                            <span>$3.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>sandwich</span>
+                            <a href="lunch/lunch6.jpg" download="Lunch">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="lunch/lunch7.jpg" loading="lazy" alt="lunch image" loading="lazy">
+                        <div class="img-about">
+                            <span>$18.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>hamburger</span>
+                            <a href="lunch/lunch7.jpg" download="Lunch">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="lunch/lunch8.jpg" loading="lazy" alt="lunch image" loading="lazy">
+                        <div class="img-about">
+                            <span>$15.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>spaghetti</span>
+                            <a href="lunch/lunch8.jpg" download="Lunch">Order</a>
+                        </div>
+                    </div>
+                </section>
+                <input type="radio" name="images" id="dinner">
+                <section class="img-center">
+                    <div>
+                        <img src="dinner/dinner1.jpg" loading="lazy" alt="dinner image" loading="lazy">
+                        <div class="img-about">
+                            <span>$15.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>fish</span>
+                            <a href="dinner/dinner1.jpg" download="Dinner">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dinner/dinner2.jpg" loading="lazy" alt="dinner image" loading="lazy">
+                        <div class="img-about">
+                            <span>$31.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>spaghetti</span>
+                            <a href="dinner/dinner2.jpg" download="Dinner">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dinner/dinner3.jpg" loading="lazy" alt="dinner image" loading="lazy">
+                        <div class="img-about">
+                            <span>$32.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>spaghetti</span>
+                            <a href="dinner/dinner3.jpg" download="Dinner">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dinner/dinner4.jpg" loading="lazy" alt="dinner image" loading="lazy">
+                        <div class="img-about">
+                            <span>$33.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>spaghetti</span>
+                            <a href="dinner/dinner4.jpg" download="Dinner">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dinner/dinner5.jpg" loading="lazy" alt="dinner image" loading="lazy">
+                        <div class="img-about">
+                            <span>$34.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>rice</span>
+                            <a href="dinner/dinner5.jpg" download="Dinner">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dinner/dinner6.jpg" loading="lazy" alt="dinner image" loading="lazy">
+                        <div class="img-about">
+                            <span>$35.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>chicken</span>
+                            <a href="dinner/dinner6.jpg" download="Dinner">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dinner/dinner7.jpg" loading="lazy" alt="dinner image" loading="lazy">
+                        <div class="img-about">
+                            <span>$20.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>chicken</span>
+                            <a href="dinner/dinner7.jpg" download="Dinner">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dinner/dinner8.jpg" loading="lazy" alt="dinner image" loading="lazy">
+                        <div class="img-about">
+                            <span>$10.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>chicken</span>
+                            <a href="dinner/dinner8.jpg" download="Dinner">Order</a>
+                        </div>
+                    </div>
+                </section>
+                <input type="radio" name="images" id="dessert">
+                <section class="img-center">
+                    <div>
+                        <img src="dessert/dessert1.jpg" loading="lazy" alt="dessert image" loading="lazy">
+                        <div class="img-about">
+                            <span>$1.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>Strawberry cake</span>
+                            <a href="dessert/dessert1.jpg" download="Dessert">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dessert/dessert2.jpg" loading="lazy" alt="dessert image" loading="lazy">
+                        <div class="img-about">
+                            <span>$2.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>Strawberry cake</span>
+                            <a href="dessert/dessert2.jpg" download="Dessert">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dessert/dessert3.jpg" loading="lazy" alt="dessert image" loading="lazy">
+                        <div class="img-about">
+                            <span>$3.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>fruits cake</span>
+                            <a href="dessert/dessert3.jpg" download="Dessert">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dessert/dessert4.jpg" loading="lazy" alt="dessert image" loading="lazy">
+                        <div class="img-about">
+                            <span>$4.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>fruits pie</span>
+                            <a href="dessert/dessert4.jpg" download="Dessert">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dessert/dessert5.jpg" loading="lazy" alt="dessert image" loading="lazy">
+                        <div class="img-about">
+                            <span>$5.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>Strawberry</span>
+                            <a href="dessert/dessert5.jpg" download="Dessert">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dessert/dessert6.jpg" loading="lazy" alt="dessert image" loading="lazy">
+                        <div class="img-about">
+                            <span>$8.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>chocolate</span>
+                            <a href="dessert/dessert6.jpg" download="Dessert">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dessert/dessert7.jpg" loading="lazy" alt="dessert image" loading="lazy">
+                        <div class="img-about">
+                            <span>$6.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>chocolate cake</span>
+                            <a href="dessert/dessert7.jpg" download="Dessert">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="dessert/dessert8.jpg" loading="lazy" alt="dessert image" loading="lazy">
+                        <div class="img-about">
+                            <span>$13.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>chocolate cake with Strawberry</span>
+                            <a href="dessert/dessert8.jpg" download="Dessert">Order</a>
+                        </div>
+                    </div>
+                </section>
+                <input type="radio" name="images" id="shake">
+                <section class="img-center">
+                    <div>
+                        <img src="shake/shake1.jpg" loading="lazy" alt="shake image" loading="lazy">
+                        <div class="img-about">
+                            <span>$13.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>lemon shake</span>
+                            <a href="shake/shake1.jpg" download="Shake">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="shake/shake2.jpg" loading="lazy" alt="shake image" loading="lazy">
+                        <div class="img-about">
+                            <span>$3.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>kiwi shake</span>
+                            <a href="shake/shake2.jpg" download="Shake">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="shake/shake3.jpg" loading="lazy" alt="shake image" loading="lazy">
+                        <div class="img-about">
+                            <span>$113.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>Strawberry shake</span>
+                            <a href="shake/shake3.jpg" download="Shake">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="shake/shake4.jpg" loading="lazy" alt="shake image" loading="lazy">
+                        <div class="img-about">
+                            <span>$33.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>grape shake</span>
+                            <a href="shake/shake4.jpg" download="Shake">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="shake/shake5.jpg" loading="lazy" alt="shake image" loading="lazy">
+                        <div class="img-about">
+                            <span>$7.00</span>
+                            <img src="5star.png" alt="-star">
+                            <span>coffee shake</span>
+                            <a href="shake/shake5.jpg" download="Shake">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="shake/shake6.jpg" loading="lazy" alt="shake image" loading="lazy">
+                        <div class="img-about">
+                            <span>$3.50</span>
+                            <img src="5star.png" alt="-star">
+                            <span>Strawberry shake</span>
+                            <a href="shake/shake6.jpg" download="Shake">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="shake/shake7.jpg" loading="lazy" alt="shake image" loading="lazy">
+                        <div class="img-about">
+                            <span>$5.40</span>
+                            <img src="5star.png" alt="-star">
+                            <span>nuts shake</span>
+                            <a href="shake/shake7.jpg" download="Shake">Order</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="shake/shake8.jpg" loading="lazy" alt="shake image" loading="lazy">
+                        <div class="img-about">
+                            <span>$6.50</span>
+                            <img src="5star.png" alt="-star">
+                            <span>fruits shake</span>
+                            <a href="shake/shake8.jpg" download="Shake">Order</a>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </section>
+        <section class="callme" id="call">
+            <span class="book">Book Table</span>
+            <h3>Opening Hours</h3>
+            <a href="tel:+90795737762"><img src="call.png" loading="lazy" alt="call"></a>
+            <span id="call">Call Now</span>
+            <div><img src="af.svg" loading="lazy" alt=""><span> +93 795737762</span></div>
+            <div class="date">
+                <div>
+                    <span>Monday to tuesday</span>
+                    <p>09:00 am - 22:00 pm</p>
+                </div>
+                <div>
+                    <span>Friday to Sunday</span>
+                    <p>11:00 am - 20:00 pm</p>
+                </div>
+            </div>
+        </section>
+        <section id="Comments">
+            <span>Comments</span>
+            <h3>Customers Say</h3>
+            <input type="radio" name="person" id="person-start" checked>
+            <div class="comment" id="wahid">
+                <img src="customer/wahid.png" loading="lazy" alt="Customer picture" loading="lazy">
+                <div id="link-field">
+                    <a href="https://twitter.com/wahidAhsharifi" target="_blank"><abbr title="X"><img src="x.png" alt="X" loading="lazy"></abbr></a>
+                    <a href="https://github.com/WahidAhmadsharifi" target="_blank"><abbr title="GitHub"><img src="GitHub.png" loading="lazy" alt="GitHub" loading="lazy"></abbr></a>
+                    <a href="https://www.linkedin.com/in/wahid-ahmad-sharifi-391a61257/" target="_blank"><abbr title="Linkden"><img src="linkden.png" loading="lazy" alt="Linkden" loading="lazy"></abbr></a>
+                    <a href="mailto:thesharifi.wahid@gmail.com"><abbr title="Mail"><img src="mail.png" loading="lazy" alt="Mail" loading="lazy"></abbr></a>
+                </div>
+                <span>Wahid Sharifi</span>
+                <span>full-stack web dev</span>
+                <p>hi i am <a href="https://wahidahsharifi.netlify.app">wahid sharifi</a> a web developer and author of this site. part of <a href="https://leonnoel.com/100devs/">#100Devs</a> community, enjoy to help people and companies to build websites.</p>
+            </div>
+            <input type="radio" name="person" id="one">
+            <div class="comment" id="salaam">
+                <img src="customer/salaam.jpg" loading="lazy" alt="Customer picture" loading="lazy">
+                <div id="link-field">
+                    <a href="https://twitter.com/salaam_azimi" target="_blank"><abbr title="X"><img src="x.png" loading="lazy" alt="X" loading="lazy"></abbr></a>
+                    <a href="https://github.com/WahidAhmadsharifi" target="_blank"><abbr title="GitHub"><img src="GitHub.png" loading="lazy" alt="GitHub" loading="lazy"></abbr></a>
+                    <a href="https://www.linkedin.com/in/wahid-ahmad-sharifi-391a61257/" target="_blank"><abbr title="Linkden"><img src="linkden.png" loading="lazy" alt="Linkden" loading="lazy"></abbr></a>
+                    <a href="mailto:salaamazimi21@gmail.com"><abbr title="Mail"><img src="mail.png" alt="Mail" loading="lazy"></abbr></a>
+                </div>
+                <span>Mr. Salaam Azimi</span>
+                <span>front-end dev</span>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos adipisci iure voluptas quae obcaecati natus? Rem, corporis vel, temporibus deserunt, earum consequatur nemo necessitatibus minus voluptatum laborum voluptates molestias.</p>
+            </div>
+            <input type="radio" name="person" id="two">
+            <div class="comment" id="elyas">
+                <img src="customer/elyas.jpg" loading="lazy" alt="Customer picture" loading="lazy">
+                <div id="link-field">
+                    <a href="https://twitter.com/ElyasSharifi48" target="_blank"><abbr title="X"><img src="x.png" loading="lazy" alt="X" loading="lazy"></abbr></a>
+                    <a href="https://github.com/WahidAhmadsharifi" target="_blank"><abbr title="GitHub"><img src="GitHub.png" loading="lazy" alt="GitHub" loading="lazy"></abbr></a>
+                    <a href="https://www.linkedin.com/in/wahid-ahmad-sharifi-391a61257/" target="_blank"><abbr title="Linkden"><img src="linkden.png" loading="lazy" alt="Linkden" loading="lazy"></abbr></a>
+                    <a href="mailto:salaamazimi21@gmail.com"><abbr title="Mail"><img src="mail.png" alt="Mail" loading="lazy"></abbr></a>
+                </div>
+                <span>Mr. Elyas Sharifi</span>
+                <span>full-stack web dev</span>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos adipisci iure voluptas quae obcaecati natus? Rem, corporis vel, temporibus deserunt, earum consequatur nemo necessitatibus minus voluptatum laborum voluptates molestias.</p>
+            </div>
+            <input type="radio" name="person" id="three">
+            <section class="label-sec">
+                <label for="person-start"></label>
+                <label for="one"></label>
+                <label for="two"></label>
+            </section>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
