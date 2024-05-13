@@ -340,12 +340,12 @@ input[name="images"]:checked + section {
    bottom: 13px;
    position: relative;
 }
-.img-about > a {
+.img-about > div {
    position: relative;
    color: #fff;
    background-color: orange;
-   width: 100px;
-   left: 25px;
+   width: 120px;
+   left: 15px;
 }
 .img-center > div > img {
    position: relative;
