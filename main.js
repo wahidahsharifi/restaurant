@@ -39,7 +39,7 @@ searchBtn.addEventListener("click", function () {
 });
 
 // order
-let clickDivs = document.querySelectorAll(".img-about div");
+let clickDivs = document.querySelectorAll(".img-about div:last-of-type");
 
 clickDivs.forEach((element) => {
    let clicks = 0;

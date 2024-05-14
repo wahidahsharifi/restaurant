@@ -310,23 +310,24 @@ input[name="images"]:checked + section {
          filter: brightness(0.5);
       }
       > div {
-         display: block;
+         visibility: visible;
       }
    }
 }
 .img-about {
-   display: none;
    position: absolute;
    z-index: 2;
    width: 100%;
    bottom: 5%;
    color: #fff;
-}
-.img-about > * {
-   display: block !important;
+   display: flex;
+   align-items: center;
+   flex-flow: column wrap;
+   justify-content: center;
+   visibility: hidden;
 }
 .img-about > span:first-of-type {
-   top: -23px;
+   top: 0;
    position: relative;
    font-size: 25px;
 }
@@ -334,18 +335,40 @@ input[name="images"]:checked + section {
    position: relative;
    top: -45px;
    width: 80px;
-   margin-left: 36px;
 }
 .img-about > span:last-of-type {
    bottom: 13px;
    position: relative;
 }
-.img-about > div {
+.img-about > .star{
+   background-image: url(files/img/menu/else/5star.png);
+   position: relative;
+   top: -6px;
+   height: 72px;
+   background-repeat: repeat-x;
+   background-size: 20px;
+}
+.img-about > .five-star {
+   width: 100px;
+}
+.img-about > .four-star {
+   width: 80px;
+}
+.img-about > .three-star {
+   width: 60px;
+}
+.img-about > .two-star {
+   width: 40px;
+}
+.img-about > .one-star {
+   width: 20px;
+}
+.img-about > div:last-of-type {
    position: relative;
    color: #fff;
    background-color: orange;
    width: 120px;
-   left: 15px;
+   user-select: none;
 }
 .img-center > div > img {
    position: relative;
