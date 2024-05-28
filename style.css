@@ -461,17 +461,33 @@ input[name="images"]:checked + section {
    font-size: 40px;
    margin: 0 0 35px 0;
 }
-#Comments > input {
-   display: none;
-   &:checked + div {
-      display: flex;
+#commentsWrap {
+   display: flex;
+   flex-flow: row nowrap;
+   align-items: center;
+   justify-content: space-between;
+   margin: 50px 5% 0 5%;
+}
+.arrow {
+   padding: 15px 10px 15px 20px;
+   background: #cbcbcb;
+   border-radius: 50px;
+   cursor: pointer;
+   &:hover{
+      background-color: #e3e2e2;
    }
 }
-#Comments p > a {
+#rightArrow{
+   transform: rotateY(180deg);
+}
+#commentContent p > a {
    font-weight: 700;
    color: #00f;
 }
 .comment {
+   display: flex;
+}
+#salaam, #elyas{
    display: none;
 }
 .comment > img {
@@ -542,7 +558,7 @@ input[name="images"]:checked + section {
 .label-sec {
    height: 20px;
 }
-.label-sec > label {
+.label-sec > div {
    display: inline-block;
    width: 10px;
    height: 10px;
@@ -550,18 +566,16 @@ input[name="images"]:checked + section {
    background-color: #000;
    vertical-align: middle;
    transition: all 0.1s ease-out;
-
-   &:hover {
-      width: 15px;
-      height: 15px;
-      cursor: pointer;
-   }
 }
 /* media query */
 
-@media (pointer: coarse) and (hover: none) {
-   .label-sec > label {
-      margin: 10px 15px;
+@media (hover: none) and (pointer: coarse) {
+   /* Styles for touch devices */
+   .img-center > div > img{
+      filter: brightness(.5);
+   }
+   .img-about {
+      visibility: visible;
    }
 }
 @media screen and (min-width: 1500px) {
