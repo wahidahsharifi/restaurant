@@ -26,7 +26,7 @@ header {
    position: relative;
    margin: auto;
 }
-.header{
+.header {
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -100,8 +100,11 @@ header {
 }
 
 /* cart */
-/* #cart{
-   position: absolute;
+#cart {
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
    top: 0;
    right: 0;
    background-color: #fff;
@@ -110,47 +113,131 @@ header {
    width: clamp(350px, 90%, 400px);
    height: 100vh;
    z-index: 8;
+   right: -440px;
+   overflow: hidden;
+   transition: right 500ms ease;
 }
-.cartTop{
+#cart.cartShow {
+   right: 0;
+}
+#openCart {
+   position: relative;
+}
+#openCart span {
+   display: none;
+   position: absolute;
+   background-color: red;
+   border-radius: 100%;
+   width: 7px;
+   height: 7px;
+   right: 3px;
+   top: -2px;
+}
+.cartTop {
    display: flex;
    justify-content: space-between;
+   margin-inline: 4px;
+   background-color: #fff;
+   z-index: 2;
 }
-#cart .ExitCart{
+#cart .ExitCart {
    background-color: transparent;
-   &:hover{
+   width: 25px;
+   height: 25px;
+   &:hover {
       background-color: #e3e2e2;
    }
 }
-.cartTop h3{
+.cartTop h3 {
    font-size: 30px;
    line-height: 0;
 }
-.cartTop input{
+.cartTop input {
    width: 30px;
 }
 
-.cartItems{
+.cartItems {
    padding: 0 5px;
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+   flex: 1;
+   overflow: auto;
 }
-.item{
+.item {
    display: flex;
    align-items: flex-start;
+   justify-content: space-between;
+   align-items: center;
+   top: 0;
+   margin-bottom: 0;
+   position: relative;
+   transition: all 500ms ease, margin-bottom 600ms ease;
 }
-.item img{
+.item img {
    width: 80px;
    border-radius: 7px;
 }
-.item h4{
+.item .itemInfo {
+   flex: 1;
+   margin-left: 10px;
+}
+.item h4 {
    font-size: 25px;
    margin: 0;
-} */
+}
+.item .itemdPrice {
+   font-size: 22px;
+}
+.itemStatus {
+   display: flex;
+   flex-flow: column nowrap;
+   gap: 20px;
+}
+.itemStatus input,
+.itemStatus img {
+   width: 30px;
+   height: 30px;
+}
+.itemRemove {
+   transform-origin: 0 50%;
+   top: -50px;
+   transform: rotateX(90deg);
+   margin-bottom: -125px;
+}
+
+.cartFoot {
+   font-size: 24px;
+   height: 50px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 20px;
+   gap: 10px;
+}
+.cartFoot span * {
+   display: inline-block;
+}
+.cartFoot button {
+   border: 1px solid #ffa500;
+   background: #ffb829;
+   font-size: 24px;
+   border-radius: 5px;
+   padding: 5px 70px;
+   flex: 1;
+
+   &:hover {
+      cursor: pointer;
+   }
+}
+
 /* main */
 
 main {
    max-width: 1500px;
    margin: 0 auto;
 }
-.Welcomewrap{
+.Welcomewrap {
    background-image: url(files/img/menu/dessert/dessert1.jpg);
    min-height: max-content;
    height: 100vh;
@@ -266,13 +353,13 @@ select * {
 }
 
 /* story */
-.storywrap{
+.storywrap {
    display: flex;
    align-items: center;
 }
-.storywrap > div{
+.storywrap > div {
    width: 40%;
-   &>img{
+   & > img {
       width: 100%;
    }
 }
@@ -435,7 +522,7 @@ input[name="images"]:checked + section {
    background-color: rgb(215 215 215 / 60%);
    z-index: 1;
 
-   &:hover{
+   &:hover {
       cursor: pointer;
    }
 }
@@ -621,7 +708,8 @@ input[name="images"]:checked + section {
    }
 }
 
-div.amount div.star {
+div.amount div.star,
+.star {
    position: relative;
    background-image: url(files/img/menu/else/5star.png);
    height: 35px;
@@ -663,7 +751,7 @@ div.amount div.star {
    font-size: 40px;
    margin: 10px 0;
 }
-#call{
+#call {
    font-size: 20px;
 }
 
@@ -883,11 +971,11 @@ div.amount div.star {
    h1 {
       font-size: 80px;
    }
-   .Welcomewrap{
+   .Welcomewrap {
       max-height: 500px;
       min-height: 499px;
    }
-   .welcome{
+   .welcome {
       padding: 80px 8%;
    }
 }
@@ -921,27 +1009,27 @@ div.amount div.star {
          background-color: rgb(180, 165, 165);
       }
    }
-   .storywrap > div{
+   .storywrap > div {
       display: none;
    }
-   .storywrap{
+   .storywrap {
       background-image: url(files/img/else/story.png);
       background-repeat: no-repeat;
       background-size: auto 100%;
       background-position: 0;
       background-attachment: fixed;
    }
-   .story{
+   .story {
       background-color: rgba(255, 255, 255, 0.6);
       animation-name: lighter;
       animation-timeline: view(300px);
       padding: 0 5%;
    }
-   .story h2{
-      font-size: camp(200px, 10vw, 300px,);
+   .story h2 {
+      font-size: camp(200px, 10vw, 300px);
    }
    @keyframes lighter {
-      to{
+      to {
          background-color: rgba(255, 255, 255, 0.9);
       }
    }
@@ -995,7 +1083,7 @@ div.amount div.star {
    h1 {
       font-size: 11vw;
    }
-   .Welcomewrap{
+   .Welcomewrap {
       max-height: 440px;
       min-height: 200px;
       height: 100%;
@@ -1039,11 +1127,16 @@ div.amount div.star {
    }
 }
 @media screen and (max-width: 450px) {
-   .Welcomewrap{
+   #cart {
+      width: 100%;
+      border-radius: 0;
+   }
+
+   .Welcomewrap {
       min-height: 200px;
       max-height: 400px;
    }
-   .welcome input{
+   .welcome input {
       font-size: 16px;
    }
    .story > h2 {
@@ -1056,13 +1149,13 @@ div.amount div.star {
       height: 110px;
       margin-top: 20px;
    }
-   .food-nav > span{
+   .food-nav > span {
       font-size: 6vw;
    }
-   .food-nav > h2{
+   .food-nav > h2 {
       font-size: 11vw;
    }
-   .img-center > div{
+   .img-center > div {
       width: 100%;
       height: auto;
    }

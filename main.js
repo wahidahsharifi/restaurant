@@ -42,40 +42,141 @@ searchBtn.addEventListener("click", function () {
 });
 
 /*
+   cart
+*/
+
+// open & close
+
+function slideCart(para) {
+   const cart = document.getElementById("cart");
+   para ? cart.classList.add("cartShow") : cart.classList.remove("cartShow");
+}
+
+document.querySelector("#cart .ExitCart").addEventListener("click", () => {
+   slideCart(false)
+});
+
+document.getElementById("openCart").addEventListener("click", () => {
+   slideCart(true)
+});
+
+// checkbox & count
+
+const checkbox = document.querySelector(".cartTop input");
+const checkboxs = document.querySelectorAll(".cartItems input");
+let checkCount = 0;
+
+document.querySelector(".cartTop input").addEventListener("click", (e) => {
+   if (e.srcElement.checked) {
+      checkboxs.forEach((check) => {
+         check.checked = true;
+         totalItems(true);
+      });
+   } else {
+      checkboxs.forEach((check) => {
+         check.checked = false;
+         checkCount = 0;
+      });
+   }
+   document.querySelector(".amount1").textContent = checkCount;
+});
+
+function itemstate() {
+   const checks = document.querySelectorAll(".cartItems input");
+
+   checks.forEach((check) => {
+      check.addEventListener("click", (e) => {
+         checkTest();
+      });
+   });
+}
+
+function checkTest() {
+   let checkStatus = 1;
+   checkCount = 0;
+   const checks = document.querySelectorAll(".cartItems input");
+
+   checks.forEach((c) => {
+      if (c.checked) {
+         checkCount += 1;
+      }
+      c.checked && checkStatus == 1 ? 1 : (checkStatus = 0);
+   });
+   document.querySelector(".amount1").textContent = checkCount;
+   checkStatus == 1 ? (checkbox.checked = true) : (checkbox.checked = false);
+}
+
+itemstate();
+totalItems();
+
+function totalItems(e) {
+   let checkAmount = 0;
+   const checks = document.querySelectorAll(".cartItems input");
+   checks.forEach((check) => {
+      checkAmount += 1;
+   });
+   document.querySelector(".amount2").textContent = checkAmount;
+   if ((e = true)) {
+      checkCount = checkAmount;
+   }
+   document.querySelector('#openCart span').style.display = checkAmount > 0 ? 'block' : 'none';
+}
+
+// delete
+
+document.querySelectorAll(".itemStatus > img").forEach((del) => {
+   del.addEventListener("click", (e) => {
+      const target = e.target.parentNode.parentNode;
+      target.classList.add("itemRemove");
+      target.addEventListener("transitionend", () => {
+         target.querySelector("input").checked = false;
+         target.remove();
+         totalItems();
+         checkTest();
+      });
+   });
+});
+
+/*
+   favorites
+*/
+
+// s
+
+/*
    order
 */
 
-
 // amount
 
-document.addEventListener('DOMContentLoaded', () => {
-   const increaseButtons = document.querySelectorAll('.increase');
-   const decreaseButtons = document.querySelectorAll('.decrease');
-   const quantities = document.querySelectorAll('.quantity');
-   const orderButtons = document.querySelectorAll('.order');
+document.addEventListener("DOMContentLoaded", () => {
+   const increaseButtons = document.querySelectorAll(".increase");
+   const decreaseButtons = document.querySelectorAll(".decrease");
+   const quantities = document.querySelectorAll(".quantity");
+   const orderButtons = document.querySelectorAll(".order");
 
    increaseButtons.forEach((button, index) => {
-       button.addEventListener('click', () => {
-           let currentQuantity = parseInt(quantities[index].textContent);
-           currentQuantity++;
-           quantities[index].textContent = currentQuantity;
-       });
+      button.addEventListener("click", () => {
+         let currentQuantity = parseInt(quantities[index].textContent);
+         currentQuantity++;
+         quantities[index].textContent = currentQuantity;
+      });
    });
 
    decreaseButtons.forEach((button, index) => {
-       button.addEventListener('click', () => {
-           let currentQuantity = parseInt(quantities[index].textContent);
-           if (currentQuantity > 0) {
-               currentQuantity--;
-               quantities[index].textContent = currentQuantity;
-           }
-       });
+      button.addEventListener("click", () => {
+         let currentQuantity = parseInt(quantities[index].textContent);
+         if (currentQuantity > 0) {
+            currentQuantity--;
+            quantities[index].textContent = currentQuantity;
+         }
+      });
    });
 
    orderButtons.forEach((button, index) => {
-       button.addEventListener('click', () => {
-           quantities[index].textContent = 0;
-       });
+      button.addEventListener("click", () => {
+         quantities[index].textContent = 0;
+      });
    });
 });
 
@@ -116,7 +217,6 @@ document.querySelectorAll(".img-center > div > img").forEach((food) => {
       });
    });
 });
-
 
 document
    .querySelectorAll(".img-about-content > div:first-child")
